@@ -1,0 +1,43 @@
+body, html {
+    margin: 0; padding: 0; overflow: hidden;
+    background-color: #05050a; font-family: 'Segoe UI', sans-serif;
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
+}
+#top-bar {
+    position: absolute; top: 10px; width: 100%;
+    display: flex; justify-content: space-between;
+    padding: 0 20px; box-sizing: border-box; z-index: 20; pointer-events: none;
+}
+#player-stats, #balance-board, #exit-btn {
+    pointer-events: auto; background: rgba(255, 255, 255, 0.1);
+    padding: 8px 15px; border-radius: 12px; color: white;
+    backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1);
+}
+#exit-btn { cursor: pointer; background: rgba(255, 50, 50, 0.2); display: none; }
+#menu {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.95); padding: 40px; border-radius: 30px;
+    text-align: center; color: white; z-index: 100; border: 2px solid #3f51b5;
+}
+#controls {
+    position: absolute; bottom: 40px; width: 100%; display: none;
+    justify-content: space-between; align-items: center; padding: 0 50px; box-sizing: border-box;
+}
+#analog-container {
+    width: 120px; height: 120px; background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%; border: 2px solid rgba(255, 255, 255, 0.1); position: relative;
+}
+#analog-stick {
+    position: absolute; width: 50px; height: 50px; background: #00d2ff;
+    border-radius: 50%; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    box-shadow: 0 0 15px #00d2ff88;
+    pointer-events: none;
+}
+#split-btn {
+    width: 80px; height: 80px; border-radius: 50%; background: #3f51b5;
+    color: white; border: none; font-weight: bold; cursor: pointer;
+    box-shadow: 0 0 15px rgba(63, 81, 181, 0.5); z-index: 60;
+}
+canvas { display: block; }
